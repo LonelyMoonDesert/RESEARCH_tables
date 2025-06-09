@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{zhang2020batchcrypt}
+C.~Zhang, S.~Li, J.~Xia, W.~Wang, F.~Yan, and Y.~Liu, ``{BatchCrypt}: Efficient homomorphic encryption for {Cross-Silo} federated learning,'' in {\em USENIX Annual Technical Conference (USENIX ATC)}, USENIX, 2020.
+
+\bibitem{xu2022hercules}
+G.~Xu, X.~Han, S.~Xu, T.~Zhang, and H.~Li, ``Hercules: Boosting the performance of privacy-preserving federated learning,'' {\em IEEE Transactions on Dependable and Secure Computing}, 2022.
+
+\bibitem{zhao2022pvd}
+J.~Zhao, H.~Zhu, F.~Wang, R.~Lu, and Z.~Liu, ``{PVD-FL}: A privacy-preserving and verifiable decentralized federated learning framework,'' {\em IEEE Transactions on Information Forensics and Security}, 2022.
+
+\bibitem{huang2022cheetah}
+Z.~Huang, W.~Lu, C.~Hong, and J.~Ding, ``{Cheetah}: Lean and fast secure {Two-Party} deep neural network inference,'' in {\em 31st USENIX Security Symposium (USENIX Security 22)}, pp.~1161--1178, USENIX, 2022.
+
+\end{thebibliography}

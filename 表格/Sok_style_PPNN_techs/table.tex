@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx} % for \resizebox
+\usepackage{pifont}
+\usepackage[a4paper, left=1.0cm, right=1.0cm, top=1.0cm, bottom=1.0cm]{geometry}
+\begin{document}
+
+\newcommand{\uptriangle}{\ensuremath{\triangle}}
+\newcommand{\downtriangle}{\ensuremath{\bigtriangledown}}
+\newcommand{\fullsquare}{\ensuremath{\blacksquare}}
+\newcommand{\opensquare}{\ensuremath{\square}}
+\newcommand{\opencircle}{\ensuremath{\circ}}
+
+\begin{table}[htbp]
+\caption{Framework Summary (\ding{116}: Oblivious Inference, \ding{115}: Outsourced Inference, \opensquare: Outsourced Training, \fullsquare: Private Training)}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cllccccccccccccccccccccc}
+\toprule
+Scene &
+Framework & 
+Reference & Year & Publication & CCF & \rotatebox{90}{Privacy Service} & 
+\rotatebox{90}{Trunc.\& Wrap} & \rotatebox{90}{Bitwidth} & \rotatebox{90}{B/QNN} & 
+\rotatebox{90}{Poly.Approx.} & \rotatebox{90}{CMP} & \rotatebox{90}{Num. Method} & 
+\rotatebox{90}{Offline/Online} & \rotatebox{90}{HE SIMD} & \rotatebox{90}{Dyna. Weights} & \rotatebox{90}{GPU} & \rotatebox{90}{Optimize Arch.} & \rotatebox{90}{Compiler} &
+\rotatebox{90}{Datasets} & 
+\rotatebox{90}{GC/GMW} & \rotatebox{90}{OT} & \rotatebox{90}{SS} & \rotatebox{90}{HE} \\
+\midrule
+
+Pure-LHE &
+BatchCrypt & 
+\cite{zhang2020batchcrypt} & 2020 & USENIX & A & \fullsquare &  % Homomorphic Encryption
+\ding{108} & \ding{109} & \ding{108} & 
+\ding{109} & \ding{109} & \ding{109} & 
+\ding{108} & \ding{109} & \ding{109} & \ding{109} & \ding{108} & \ding{109} & 
+FMNIST, CIFAR-10, LSTM &
+\ding{109} & \ding{109} & \ding{109} & Paillier \\  % Homomorphic Encryption → HE/L
+
+Pure-HE (LHE) &
+Hercules &
+\cite{xu2022hercules} & 2022 & IEEE TDSC & A & \fullsquare & % Homomorphic Encryption
+\ding{109} & \ding{109} & \ding{109} &
+\ding{109} & \ding{109} & \ding{109} &
+\ding{108} & \ding{108} & — & \ding{109} & \ding{108} & \ding{108} &
+MNIST, FMNIST, CIFAR-10, ImageNet &
+\ding{109} & \ding{109} & \ding{108} & MCKKS \\
+
+non-colluding MPC & 
+PVD-FL & 
+\cite{zhao2022pvd} & 2022 & IEEE TIFS & A & \opensquare &  % Homomorphic Encryption
+\ding{109} & L & \ding{109} & % Fixed-Point: Trunc. & Wrap, Bitwidth, B/QNN
+\ding{109} & \ding{108} & - & % Non-Linear: Poly. Approx, CMP, Num. Method
+\ding{108} & \ding{108} & \ding{108} & \ding{109} & \ding{109} & \ding{109} & % Optimization: Offline/Online, HE SIMD, Dyna. Weights, GPU, Optimize Arch., Compiler
+MNIST, Thyroid, Breast cancer, German credit &
+\ding{109} & \ding{109} & \ding{109} & SHE \\  % Homomorphic
+
+Server/Client &
+Cheetah &
+\cite{huang2022cheetah} & 2022 & USENIX & A & \ding{115} &
+\ding{108} & L & \ding{108} &
+\ding{108} & \ding{108} & I &
+\ding{108} & \ding{108} & \ding{109} & \ding{109} & \ding{108} & \ding{109} &
+ResNet50, DenseNet121 &
+\ding{108} & \ding{108} & \ding{108} & LWE, RLWE, VOLE OT \\
+
+
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\bibliographystyle{ieeetr}
+\bibliography{ref}
+
+\end{document}
